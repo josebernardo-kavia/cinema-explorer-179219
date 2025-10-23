@@ -1,7 +1,6 @@
 /** TailwindCSS configuration for MovieAI (Royal Purple theme) */
 module.exports = {
   content: [
-    "./index.html",
     "./public/index.html",
     "./src/**/*.{js,jsx,ts,tsx}"
   ],
