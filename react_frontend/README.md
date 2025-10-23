@@ -1,82 +1,49 @@
-# Lightweight React Template for KAVIA
+# MovieAI Frontend (Day 1 - Minimal)
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+Elegant, minimal React app using TailwindCSS with the Royal Purple theme.
 
-## Features
+## Quickstart
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
-
-## Getting Started
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### `npm test`
-
-Launches the test runner in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-## Customization
-
-### Colors
-
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
+1) Install dependencies
+- Node 18+ recommended
+- From this folder:
+```
+npm install
 ```
 
-### Components
+2) Run the development server (port 3000)
+```
+npm start
+```
+Open http://localhost:3000
 
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
+3) TailwindCSS setup confirmation
+- Tailwind is configured via `tailwind.config.cjs` and `postcss.config.cjs`.
+- Global utilities are imported in `src/index.css` using:
+  - `@tailwind base;`
+  - `@tailwind components;`
+  - `@tailwind utilities;`
+- The UI uses Tailwind utility classes. You should see:
+  - Header with “🎬 MovieAI”
+  - Hero title “🎬 Welcome to MovieAI”
+  - Featured and Trending placeholder grids
 
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
+4) Upcoming backend (port 3001)
+- A Flask backend will be available on http://localhost:3001
+- CORS will be enabled to allow requests from http://localhost:3000
+- Frontend will fetch data from endpoints such as `/api/hello`, `/api/trending`, `/api/search`
 
-## Learn More
+## Scripts
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `npm start` — Start CRA dev server on port 3000
+- `npm run build` — Production build
+- `npm test` — Run tests
 
-### Code Splitting
+## Theme
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Primary: `#8B5CF6` (Royal Purple)
+- Secondary: `#6B7280`
+- Background: `#0b0b12` (dark)
+- Subtle rounded corners and soft shadows across components
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Refer to `KAVIA_PLAN_DAY1.md` for planning details and next steps.
